@@ -29,7 +29,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -7.16, y: 8.04, z: 0}
-  m_LocalScale: {x: 10, y: 10, z: 1}
+  m_LocalScale: {x: 12, y: 12, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1353558850377904570}
@@ -54,7 +54,7 @@ BoxCollider2D:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_LayerOverridePriority: 0
+  m_LayerOverridePriority: -1
   m_ForceSendLayers:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -111,8 +111,7 @@ MonoBehaviour:
   outputs:
   - {fileID: 306936411874394793}
   processingTime: 1
-  maxResources: 100
-  resource: 0
+  resource: 1
 --- !u!1 &1576148198877796046
 GameObject:
   m_ObjectHideFlags: 0
@@ -312,7 +311,7 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &6983546502230264459
 MonoBehaviour:
@@ -418,15 +417,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 948880041032228085, guid: dd7c0837b4608f54e97476feb06eb55b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.019
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 948880041032228085, guid: dd7c0837b4608f54e97476feb06eb55b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.422
+      value: -0.36
       objectReference: {fileID: 0}
     - target: {fileID: 948880041032228085, guid: dd7c0837b4608f54e97476feb06eb55b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 948880041032228085, guid: dd7c0837b4608f54e97476feb06eb55b, type: 3}
       propertyPath: m_LocalRotation.w

@@ -8,7 +8,7 @@ public class Mine : BuildingBase
     {
         base.InitBuilding();
         
-        outputs[0]._resource = resource;
+        outputs[0].resource = resource;
     }
 
     protected override void UpdateProcess()
@@ -19,9 +19,13 @@ public class Mine : BuildingBase
 
         if (IsFinished)
         {
-            if (outputs[0]._quantity < maxResources) outputs[0]._quantity += 1;
+            // add resource
+            if (outputs[0].quantity < outputs[0].maxResources) outputs[0].quantity += 1;
             
             IsFinished = false;
+            
+            // update text
+            outputs[0].UpdateText();
         }
     }
 }

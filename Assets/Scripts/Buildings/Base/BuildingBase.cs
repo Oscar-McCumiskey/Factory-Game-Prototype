@@ -6,7 +6,6 @@ public class BuildingBase : MonoBehaviour
     [SerializeField] protected BuildingOutput[] outputs;
 
     [SerializeField] private float processingTime = 1;
-    [SerializeField] protected int maxResources = 100;
     private float _processingTimeCounter;
     protected bool IsProcessing = false;
     protected bool IsFinished = false;

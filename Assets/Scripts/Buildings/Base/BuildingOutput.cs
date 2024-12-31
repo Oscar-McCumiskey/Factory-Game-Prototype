@@ -8,6 +8,8 @@ public class BuildingOutput : MonoBehaviour
     public int quantity = 0;
     public int maxResources = 100;
     
+    private RESOURCE _lastFrameResource = RESOURCE.EMPTY;
+    
     [SerializeField] private TextMeshPro numberText;
     [SerializeField] private TextMeshPro resourceText;
 
@@ -15,6 +17,18 @@ public class BuildingOutput : MonoBehaviour
 
     private void Start()
     {
+        UpdateText();
+    }
+
+    private void Update()
+    {
+        if (_lastFrameResource != resource)
+        {
+            quantity = 0;
+        }
+        
+        _lastFrameResource = resource;
+        
         UpdateText();
     }
 

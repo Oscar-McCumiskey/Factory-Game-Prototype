@@ -35,7 +35,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -0.05}
-  m_SizeDelta: {x: 1.5, y: 1}
+  m_SizeDelta: {x: 2, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!23 &4920107281317137418
 MeshRenderer:
@@ -319,6 +319,7 @@ MonoBehaviour:
   maxQuantity: 100
   numberText: {fileID: 2650338606929400719}
   resourceText: {fileID: 467301340560150190}
+  isPiped: 0
 --- !u!1 &3431088144500656624
 GameObject:
   m_ObjectHideFlags: 0

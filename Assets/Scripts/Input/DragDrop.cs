@@ -29,6 +29,23 @@ public class DragDrop : MonoBehaviour
             // set new position
             transform.position = newPos;
         }
+        
+        // rotate building
+        if (_dragging)
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                transform.Rotate(new Vector3(0,0,-90));
+            }
+            if (Input.GetKeyDown(KeyCode.Q))
+            {
+                transform.Rotate(new Vector3(0,0,90));
+            }
+            if (Input.GetKeyDown(KeyCode.Delete))
+            {
+                Destroy(gameObject);
+            }
+        }
     }
 
     private void OnMouseDown()

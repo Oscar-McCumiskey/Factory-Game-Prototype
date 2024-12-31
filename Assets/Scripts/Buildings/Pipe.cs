@@ -10,6 +10,8 @@ public class Pipe : MonoBehaviour
     private float _transferTime = 0;
     
     private LineRenderer _lineRenderer;
+
+    private bool _isPlaced = false;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -25,6 +27,8 @@ public class Pipe : MonoBehaviour
     {
         if (PipeInput && PipeOutput)
         {
+            _isPlaced = true;
+            
             // validate item transfer
             if (_transferCounter <= 0)
             {
@@ -57,6 +61,14 @@ public class Pipe : MonoBehaviour
                 if (PipeInput) PipeInput.isPiped = false;
                 if (PipeOutput) PipeOutput.isPiped = false;
                 
+                Destroy(gameObject);
+            }
+            
+            // destroy on building delete
+            if (_isPlaced)
+            {
+                PipeInput.isPiped = false;
+                PipeOutput.isPiped = false;
                 Destroy(gameObject);
             }
         }

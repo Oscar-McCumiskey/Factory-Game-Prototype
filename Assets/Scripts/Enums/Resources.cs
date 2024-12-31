@@ -4,5 +4,8 @@ public enum RESOURCE
     EMPTY,
     COAL,
     IRON,
-    STEEL
+    STEEL,
+    DIAMOND,
+    RING,
+    GOLD
 }

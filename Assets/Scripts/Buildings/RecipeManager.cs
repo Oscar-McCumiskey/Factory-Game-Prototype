@@ -53,6 +53,7 @@ public class RecipeManager : MonoBehaviour
         _recipes.Add(ring);
     }
 
+    // TODO: find a better solution for recipe ID
     public RESOURCE GetRecipe(RESOURCE[] inputResources)
     {
         string iD = "";
@@ -67,8 +68,6 @@ public class RecipeManager : MonoBehaviour
             revID = inputResources[i] + revID;
         }
         
-        Debug.Log("ID: " + iD);
-        
         for (int i = 0; i < _recipes.Count; i++)
         {
             string recipeID = "";
@@ -76,7 +75,6 @@ public class RecipeManager : MonoBehaviour
             // calc ID of recipe
             for (int j = 0; j < _recipes[i].InputResources.Length; j++)
             {
-                Debug.Log("Recipe: " + recipeID);
                 recipeID = recipeID + _recipes[i].InputResources[j];
             }
             
